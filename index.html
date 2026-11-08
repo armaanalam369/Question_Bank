@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system" data-font="standard">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wise Choice Question Bank &amp; Test Portal</title>
+  <meta name="description" content="Practice quizzes and timed mock tests with instant feedback, analytics and offline support.">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Wise Choice">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="appbar">
+    <button class="brand" id="homeBtn" aria-label="Go to home">
+      <span class="logo">✓</span>
+      <span class="brand-text"><b>Wise Choice</b><small>Question Bank &amp; Test Portal</small></span>
+    </button>
+    <nav class="appbar-actions">
+      <button class="icon-btn" id="themeBtn" title="Change theme" aria-label="Change theme">🌓</button>
+      <button class="icon-btn" id="historyBtn" title="Test history" aria-label="Test history">📊</button>
+      <button class="icon-btn" id="settingsBtn" title="Settings" aria-label="Settings">⚙️</button>
+    </nav>
+  </header>
+
+  <main id="app" class="container"></main>
+  <div id="toast" class="toast" role="status"></div>
+
+  <!-- Settings -->
+  <dialog id="settingsModal">
+    <div class="dlg-head"><h2>Settings</h2><button class="icon-btn" id="settingsClose" aria-label="Close">✕</button></div>
+    <div class="dlg-body" id="settingsBody"></div>
+    <div class="dlg-foot">
+      <button class="btn ghost" id="settingsCancel" type="button">Cancel</button>
+      <button class="btn primary" id="settingsSave" type="button">Save settings</button>
+    </div>
+  </dialog>
+
+  <!-- Submit confirmation -->
+  <dialog id="submitModal">
+    <div class="dlg-head"><h2 id="submitTitle">Submit test?</h2></div>
+    <div class="dlg-body" id="submitBody"></div>
+    <div class="dlg-foot">
+      <button class="btn ghost" id="submitCancel" type="button">Go back</button>
+      <button class="btn primary" id="submitConfirm" type="button">Yes, submit</button>
+    </div>
+  </dialog>
+
+  <!-- History -->
+  <dialog id="historyModal">
+    <div class="dlg-head"><h2>Test history</h2><button class="icon-btn" id="historyClose" aria-label="Close">✕</button></div>
+    <div class="dlg-body" id="historyBody"></div>
+  </dialog>
+
+  <noscript><p style="padding:1rem">Please enable JavaScript to use this app.</p></noscript>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
